@@ -20,7 +20,7 @@ def directdial():
         if _from is None:
             _from = request.args.get('From', '')
     if request.method == "POST":
-        app.logger("SIP Route %s" % request.json)
+        print("SIP Route %s" % request.json)
         if not to:
             to = request.form.get('To', None)
         if _from is None:
